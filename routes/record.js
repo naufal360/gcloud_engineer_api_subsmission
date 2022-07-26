@@ -11,10 +11,10 @@ const multer = Multer({
 
 // TODO: Sesuaikan konfigurasi database
 const connection = mysql.createConnection({
-    host: '35.232.245.14',
-    user: 'root',
-    database: 'employee',
-    password: ''
+    host: process.env.HOST_DB,
+    user: process.env.USER_DB,
+    database: process.env.NAME_DB,
+    password: process.env.PASS_DB
 })
 
 router.get("/dashboard", (req, res) => {
